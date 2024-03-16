@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Lista de Produtos</title>
+</head>
+<body>
+<div id="product-list"></div>
+
+<script>
+  // Array de produtos
+  let products = [
+    { name: "Produto 1", price: 20 },
+    { name: "Produto 2", price: 30 },
+    { name: "Produto 3", price: 25 }
+  ];
+
+  // Função para gerar HTML da lista de produtos
+  function generateProductList() {
+    let productListDiv = document.getElementById("product-list");
+    productListDiv.innerHTML = ""; // Limpa o conteúdo existente
+
+    products.forEach(product => {
+      let productDiv = document.createElement("div");
+      productDiv.classList.add("product");
+      productDiv.innerHTML = `<h3>${product.name}</h3><p>Preço: $${product.price}</p>`;
+      productListDiv.appendChild(productDiv);
+    });
+  }
+
+  // Chama a função para gerar a lista de produtos ao carregar a página
+  window.onload = generateProductList;
+</script>
+</body>
+</html>
