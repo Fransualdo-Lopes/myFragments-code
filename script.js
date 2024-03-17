@@ -92,7 +92,8 @@ lifeInWeeks(25)
 //Create your function below this line.
 //The first parameter should be the weight and the second should be the height.
 function bmiCalculator (peso,altura){
-    var bmi = peso/(altura*altura);
+   // var bmi = peso/(altura*altura);
+   var bmi = peso/Math.pow(altura,2)// elevando altura ao quadrado usando "Math.pow"
     return bmi;
 }
 
