@@ -94,7 +94,8 @@ lifeInWeeks(25)
 function bmiCalculator (peso,altura){
    // var bmi = peso/(altura*altura);
    var bmi = peso/Math.pow(altura,2)// elevando altura ao quadrado usando "Math.pow"
-    return bmi;
+    return Math.round(bmi); // Math.round arredonda o numero
+    //return bmi;
 }
 
 bmiCalculator(65,1.8);
