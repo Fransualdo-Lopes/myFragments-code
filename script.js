@@ -99,18 +99,15 @@ function bmiCalculator(peso, altura) {
   //return bmi;
 }
 
-bmiCalculator(65, 1.8);
+var bmi = bmiCalculator(65, 1.8);
+
 if (bmi <= 18.5) {
-  console.log("Seu IMC é ", bmi, " então você está abaixo do peso.:");
+    console.log("Seu IMC é", bmi, "então você está abaixo do peso.");
+} else if (bmi > 18.5 && bmi <= 24.9) {
+    console.log("Seu IMC é", bmi, "então você tem um peso normal.");
+} else {
+    console.log("Seu IMC é", bmi, "então você está acima do peso.");
 }
-
-if (bmi > 18.5) && (bmi <= 24.9){
-  console.log("Seu IMC é ", bmi, " então você tem um peso normal.:");
-}else {
-  console.log("Seu IMC é ", bmi, " então você está acima do peso.:");
-}
-
-
 
 /* Calculadora de IMC avançada (IF/ELSE)
 Anteriormente, criamos uma função capaz de calcular o IMC. Mas assim que obtivermos o resultado, desejaremos dizer ao usuário o que o número significa.
@@ -135,3 +132,36 @@ IMPORTANTE o texto da mensagem deve corresponder exatamente para que o código p
 // utilizando numeros aleatórios Math.randon()
 var n = Math.random();
 console.log(n);
+
+
+
+// PROGRAMA QUE INFORMA SE O ANO É BISSEXTO OU NAO:
+function isLeap(year) {
+  if (year % 4 === 0) {
+    if (year % 100 === 0) {
+      if (year % 400 === 0) {
+        return "Leap year.";
+      }
+    } else {
+      return "Leap year."
+    }
+  } else {
+    return "Not leap year."
+  }
+}
+
+console.log(isLeap(1948)); // true
+console.log(isLeap(1998)); // false
+console.log(isLeap(2020)); // true
+
+
+//quem vai comprar hoje?
+function whosPaying(names) {
+  var numberOfPeople = names.length;
+  var randomPersonPosition = Math.floor(Math.random() * numberOfPeople);
+  var randomPerson = names[randomPersonPosition];
+  return randomPerson + " is going to buy lunch today!";  
+}
+
+var names = ['Maria', 'João', 'Pedro', 'Tiago'];
+console.log(whosPaying(names));
