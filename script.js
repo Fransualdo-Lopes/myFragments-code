@@ -207,8 +207,6 @@ function fizzBuzz() {
 
 console.log(fizzBuzz());
 
-
-
 //desafio das 99 garrafas de cerveja:
 var numberOfBottles = 99
 while (numberOfBottles >= 0) {
